@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lotto guessing game</title>
-    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
   <body>
     <header>
@@ -14,9 +14,29 @@
     </header>
     <main>
       <form action="">
-        <p>Please enter a number between 0 and 45.</p>
-        <input type="number" name="player-guess" id="player-guess" />
+        <p class="game_cta">
+          I am thinking of 5 numbers between 0 and 45.<br />
+          Can you guess one of them?
+        </p>
+        <input
+          type="number"
+          name="player_guess"
+          id="player_guess"
+          class="player_guess_input"
+        />
+        <button class="guess_btn">Guess</button>
       </form>
+
+      <div class="user_number_display"></div>
+      <div class="lotto_numbers_display"></div>
+      <div class="results">
+        <p class="user_won">
+          You win<br />You have guessed one of the lotto numbers.
+        </p>
+        <p class="user_lost">
+          You loss!<br />You have guessed none of the lotto numbers.
+        </p>
+      </div>
     </main>
   </body>
 </html>
